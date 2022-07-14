@@ -10,7 +10,7 @@ const gradient = require('gradient-string');
 
 //main settings
 client.on("ready", () => {
-    rpcGenerator.getRpcImage(CLIENT_ID, `IMAGE_NAME`)
+    rpcGenerator.getRpcImage(CLIENT_ID, `logo`)
     .then(image => {
         let presence = new rpcGenerator.Rpc()
         .setName("twitch")
@@ -18,8 +18,8 @@ client.on("ready", () => {
         .setType("STREAMING")
         .setApplicationId(CLIENT_ID)
         .setAssetsLargeImage(image.id)
-        .setAssetsLargeText("lower text")
-        .setDetails("upper text")
+        .setAssetsLargeText("Bhagwaa")
+        .setDetails("#Proud Sanatani")
  
         client.user.setPresence(presence.toDiscord())
     }).catch(console.error)
